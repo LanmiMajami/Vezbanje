@@ -1,0 +1,126 @@
+PROGRAMIRANJE
+1.Objektno orientisano programiranje (oop)
+    Ima vise paradigma programskih jezika:1.Proceduralno (C)2.Funkcionalno (javascript)3.Objektno orijentisano (java,C#)
+2.Objektno orijentisano programiranje
+    Osnovni princip OOP su objekti. Objekti(1.Atributi(opis) npr *mis*(boja,masa) 2.Radnje)
+3.Istorodi objekti koji imaju iste atribute i iste radnje pripadaju istoj klasi.Da bi mogli da koristimo objekte prvo moramo da definisemo
+klasu u kojoj pripada taj objekat
+                                           KLASA MIS
+                                               MIS
+                                      Boja,Tezina---ATRIBUTI(polja)
+
+                                      Klik,Pomeraj---RADNJA(metode)
+POLJA
+1.Polja se definisu unutar tela klase:
+Tip polja
+Naziv polja
+;
+Promenljivima u OOP mozemo dodeliti tip podataka koji predstavlja klasu definisanu u nasem kodu.KLASE SU JEDAN OD TIPOVA PODATAKA
+
+METODA MAIN()
+Metoda main je ulazan tacka u nasu aplikaciju.
+
+KREIRANJE OBJEKATA
+-Objekti su promenljive tipa neke klase.
+-Da bi inicijalizovali objekte potrebno je pozvati specijalnu metodu za kreiranje objekata posmatrane klase
+-Ta specijalna metoda se definise u telu klase iz kojih se kreiraju objekti i naziva se konstruktor
+DEFINICIJA KONSTRUKTORA:
+1. public
+2. ime klase
+3. unutar obicnih zagrada definisu se parametri konstruktora
+Parametri su ulazni podaci za konstruktor i koriste se uglavnom za inicializaciju polja objekata koji se kreiraju pozivanjem konstruktora.
+Parametar se definise kao i svaka druga promenljiva i ako postoje vise parametra oni se odvajaju zarezom.
+Ako konstruktor nema nikakvih parametara prazne obicne zagrade su obavezne.
+4. telo konstruktora pocinje odma iza definicije parametra (odmah iza zatvorene zagrade posle definicije parametra).
+Telo konsturktora se definise unutar otvorene i zatvorene viticaste zagrade.
+Naredbe koje se nalaze unutar viticastih zagrada izvrsavaju se prilikom kreiranja posmatranog objekta.
+Uglavnom su naredbe za inicializaciju polja posmatranog objekta koji se u tom objektu kreira i kao vrednosti
+se uglavnom koriste ulazni argumenti prosleđeni prilikom poziva konstruktora.
+"this" - ukazuje na sopstvene clanove klase odnosno objekta kao na primer sto su polja, npr:
+"this.ime"  ukazuje unutar tela klase da objekat pristupa sopstvenom polju pod nazivom ime.
+
+-Kreiranje objekta se realizuje na isti nacin kao bilokoja promenljiva kojom se dodeljuje neka vrednost tako sto
+se navodi ime objekta sa leve strane operatora dodeljivanja, a sa desne se poziva konstruktor.
+Pozivanje konstruktora:
+1. new
+2. ime konstruktora
+3. unutar () se prosledjuju argumenti (konkretne vrednosti) u istom redosledu kako su definisani parametri u definiciji konstruktora.
+
+Kada se kreiraju objekti od neke klase onda kazemo da su ti objekti instanca te klase.
+
+KORISCENJE OBJEKTA
+Ako zelimo da koristimo neki objekat tj. clanove tog objekta onda koristimo takozvanu tacka notaciju tj.
+navodimo taj objekat ispred tacke, a iza tacke navodimo clan tog objekta <ime objekta>.<clan objekta>
+
+#6 METODA KLASE
+Metoda je član klase
+Metode su funkcije koje pripadaju objektu kreiranog iz klase u kojoj je definisane metoda.
+
+                                                              ____________________
+                                                              |                                  |
+Ulazne podatke (Parametri) --------> | Metoda (Funkcija) | ---------> Izlazne podatke (Rezultat koji vraća metodu na mestu poziva)
+                                                              |                                  |
+                                                              ____________________
+
+DEFINICIJA METODE
+1. tip metode - tip rezultata kojivraća metoda
+2. ime metode
+3. ulazni parametri - parametri metode pisu se unutar () , ako ima vise parametara oni se odvajaju zarezom
+Parametar se definise na isti nacin kao i svaka druga promenljiva tj. prvo se navodi tip podatka parametra pa ime parametra
+4. telo metode - telo metode se pise unutar {}
+Telo metoda predstavljaju naredbe
+Naredbe mogu samo da postoje u telu metode i nigde drugde
+Naredbe:
+*definicije lokalnih promenljivih (npr. float x)
+*naredbe dodeljivanja (npr. x=5.0)
+*aritmetičke operacije (npr. +,-,/,* a=a+b)
+*logicke operacije (<,>,==, &&, ||)
+*pozivi drugih metoda (npr. System.out.println("Hello"))
+*naredbe usnovnog grananja (switch, if else)
+*petlje (npr. for, while)
+***return - izlazi iz metode i vraća rezultat metode
+Naredbe opisuju sta će metoda da radi kad se bude pozvala
+Naredbe se odvajaju  ;  i radi preglednosti se pisu uvek u novom redu
+Metoda return je naredba kojom se prekida dalji tok izvrsavanja metode i vraca se tok izvrsavanja na mestu odakle je pozvana metoda
+Pri tome rezultat metode se vraća na onom mestu poziva te metode
+Rezultat metode se pise u naredbi return kao poslednji clan metode
+Clan naredbe return koji predstavlja rezultat metode moze da bude slozen izraz
+POZIVANJE METODE
+Pozivanje metode predstavlja deo obrade neke naredbe
+Uglavnom se rezultat metode prosleđuje nekoj lokalnoj promenljivoj preko operatora dodeljivanja
+tj. rezultat metode je nova vrednost dodeljeno promenljiivoj
+Kad se pozivaju metode one jedino mogu da se pozivaju iz nekog objekta klase u kojoj je definisana ta metoda
+Metoda se poziva iz objekta koristeći tačka notaciju
+Prvo se navodi ime objekta pre tačke a iza tačke se navodi poziv metode
+DEFINICIJA POZIVA METODE
+1. ime objekta
+2. tačka
+3. poziv metode
+a) ime metode
+b) U običnim zagradama prosleđuju se konkretne vrednosti (argumenti)
+u onom istom redosledu i istog tipa kako su definisani parametri unutar definicije metode
+U definiciji metode parametri mogu da se izostave
+U tom slucaju prilikom pozivanja metode obicne prazne zagrade su obavezne
+Poziv metode moze dapostoji kao samostalna naredbaali u tom slucaju rezultat metode se nigde nece sacuvati
+
+#7 TIP METODE VOID
+Metodama mozete u definiciji kao tip dodeliti tip VOID , tada metoda ne vraća nikakav rezultat i ona samo sto radi je da izvrsi naredbe unutar svog tela
+Tada naredba return moze da se izostavi ili ako se u nekom momentu metoda prekida onda se navodi return naredba bez rezultata
+
+#8 KLASE KAO POKAZIVAČKI TIP PODATAKA
+1. primitivne tipove podataka (počinju sa malim slovom) int,float
+2. pokazivačke tipove podataka (počinju sa velikim slovom) String,Osoba, System
+Memorija (RAM) se deli na dva dela Stack i Heap
+Na Stack-u se cuvaju promenljive primitivnih tipova podataka (int,float,double,char...)
+Vrednost ovakvih promenljiva se cuvaju u memoriji na njihovim simboličkim adresama
+Promenljive pokazivackog tipa podataka (String,Osoba,System...) se čuvaju na heap memoriji
+Simboličke adrese promenljiva pokazivačkog tipa se nalaze na step memoriji i njihov sadrzaj je adresa koja upucuje na svoj objekat na heap-u
+Pokazivacki tipovi podataka moze da im se dodeli specificna vrednost null, onda kazemo za tu promenljivu da ne upucuje ni na jedan objekat na heapp memoriji
+#9 STATIČKI CLANOVI KLASE
+Staticki clanovi klase se koriste da bi opisali univerzalne pojave koje su van domašaja objekata
+Staticki clanovi su globalni clanovi klase i oni postoje nezavisno od objekta klase u kojoj su definisani i postoje dok aplikacija radi
+Dakle one ne mogu da se pozivaju iz objekta (ne pripadaju objektu) vec se pozivaju iz same klase
+Clanovi klase koji se pozivaju iz objekta zovu se nestaticki
+STATIČKE METODE
+Staticke metoda se definisu kao i nestaticke metode ali uz prefiks static na pocetku definicije
+Unutar tela staticke metode ne mozete da pozivate sopstvene nestaticke clanove (this.)
